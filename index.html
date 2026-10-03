@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Motor de simulación de ecosistemas</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="wrap"><canvas id="cv"></canvas></div>
+<div id="hud">
+  <div class="pill" style="--a:#7be05a;--b:#2e9e3d"><i>🌱</i><b id="sP">0</b></div>
+  <div class="pill" style="--a:#6bb8ff;--b:#2f6fd0"><i>🐰</i><b id="sH">0</b></div>
+  <div class="pill" style="--a:#ff8a6b;--b:#d13a2c"><i>🦊</i><b id="sC">0</b></div>
+  <div class="pill" style="--a:#ffd45c;--b:#e09a1c"><i>⏱</i><b id="sT">0:00</b></div>
+  <button class="btn" id="bMenu" style="--c:#8b6cf0;--d:#4b36a8">⚙️</button>
+</div>
+<div id="panel">
+  <h3>⚙️ Ajustes</h3>
+  <div class="row"><span>🌱 Plantas máx</span><b id="vPlant"></b></div><input type="range" id="rPlant" min="0" max="300">
+  <div class="row"><span>🐰 Herbívoros máx</span><b id="vHerb"></b></div><input type="range" id="rHerb" min="0" max="80">
+  <div class="row"><span>🦊 Carnívoros máx</span><b id="vCarn"></b></div><input type="range" id="rCarn" min="0" max="20">
+  <div class="row"><span>🎨 Fondo</span></div>
+  <select id="sTheme"><option value="parque">🌳 Parque</option><option value="pecera">🐟 Pecera</option><option value="casa">🏠 Casa</option><option value="ciudad">🌆 Ciudad</option></select>
+  <div class="chips">
+    <label><input type="checkbox" id="cRadius"> Radios</label>
+    <label><input type="checkbox" id="cCone"> Cono</label>
+    <label><input type="checkbox" id="cDebug"> Debug</label>
+  </div>
+  <div id="stats"></div>
+</div>
+<div id="dock">
+  <button class="btn" id="bPause" style="--c:#4c9aff;--d:#1f5bb8">⏸</button>
+  <button class="btn" id="bSpeed" style="--c:#ffab2e;--d:#b36d00">1x</button>
+  <button class="btn" id="bHerb" style="--c:#35c46b;--d:#17803f">🐰</button>
+  <button class="btn" id="bCarn" style="--c:#ff5a4a;--d:#a82618">🦊</button>
+  <button class="btn" id="bGiant" style="--c:#a45cf0;--d:#5f26a8">👹</button>
+  <button class="btn" id="bReset" style="--c:#8795a8;--d:#4d5b6e">🔄</button>
+</div>
+
+<script src="js/config.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/entities.js"></script>
+<script src="js/giant.js"></script>
+<script src="js/world.js"></script>
+<script src="js/renderer.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

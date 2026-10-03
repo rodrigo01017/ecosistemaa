@@ -1,0 +1,24 @@
+:root{--ui:'Fredoka','Baloo 2','Trebuchet MS',system-ui,sans-serif}
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent;user-select:none}
+  html,body{margin:0;height:100%;overflow:hidden;background:#3c9d54;font-family:var(--ui);color:#fff}
+  #wrap{position:fixed;inset:0}
+  canvas{display:block;width:100%;height:100%;touch-action:none}
+  #hud{position:fixed;top:0;left:0;right:0;display:flex;gap:8px;align-items:center;padding:calc(10px + env(safe-area-inset-top)) 12px 0;pointer-events:none}
+  .pill{display:flex;align-items:center;gap:5px;padding:5px 12px 5px 8px;border-radius:999px;border:3px solid #fff;font-weight:700;font-size:18px;
+    background:linear-gradient(var(--a),var(--b));box-shadow:0 4px 0 rgba(0,0,0,.3);text-shadow:0 2px 0 rgba(0,0,0,.35)}
+  .pill i{font-style:normal;font-size:20px}
+  .btn{width:54px;height:54px;border-radius:50%;border:4px solid #fff;font:700 22px var(--ui);color:#fff;cursor:pointer;pointer-events:auto;
+    background:var(--c);box-shadow:0 6px 0 var(--d),0 10px 14px rgba(0,0,0,.3);text-shadow:0 2px 0 rgba(0,0,0,.3)}
+  .btn:active{transform:translateY(4px);box-shadow:0 2px 0 var(--d)}
+  #bMenu{margin-left:auto;width:46px;height:46px;font-size:20px}
+  #dock{position:fixed;left:0;right:0;bottom:0;display:flex;justify-content:center;gap:6px;flex-wrap:wrap;padding:0 8px calc(12px + env(safe-area-inset-bottom));pointer-events:none}
+  #panel{display:none;position:fixed;right:12px;top:calc(68px + env(safe-area-inset-top));width:min(290px,calc(100vw - 24px));padding:14px;border-radius:22px;
+    border:4px solid #fff;background:rgba(40,30,95,.94);box-shadow:0 8px 24px rgba(0,0,0,.4)}
+  #panel.open{display:block}
+  #panel h3{margin:0 0 8px;font-size:20px}
+  .row{display:flex;justify-content:space-between;font-size:15px;margin-top:6px}
+  input[type=range]{width:100%;accent-color:#ffd54a}
+  .chips{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
+  .chips label{padding:5px 10px;border-radius:999px;background:rgba(255,255,255,.18);font-size:14px;cursor:pointer}
+  #stats{font-size:13px;opacity:.85}
+  select{width:100%;padding:8px;margin-top:4px;border-radius:12px;border:3px solid #fff;background:#5b46c7;color:#fff;font:700 15px var(--ui)}
